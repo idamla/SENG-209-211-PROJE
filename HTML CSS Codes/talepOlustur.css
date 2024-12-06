@@ -1,0 +1,229 @@
+/* Genel Stiller */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .logo img {
+  max-width: 150px;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+header .auth-buttons a {
+  font-size: 1rem;
+  margin: 0 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+  display: flex;
+  gap: 15px; /* Butonlar arasındaki boşluk */
+  margin-right: 40px; /* Sağ kenardan uzaklık */
+}
+
+.bayi-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.bayi-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.giris-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.giris-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Talep Oluştur Bölümü */
+#talepOlustur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12%; /* Header ile mesafesi */
+}
+
+#talepOlustur .content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Form Stilleri */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+form h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form select,
+form input[type="text"],
+form input[type="tel"],
+form input[type="submit"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+form select[multiple] {
+  height: 120px; /* Çoklu seçim için geniş alan */
+}
+
+form input[type="submit"] {
+  background-color: #ffcc00;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+form input[type="submit"]:hover {
+  background-color: #ff9900;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column; /* Sorunun üst kısmında ve cevapları alt alta hizalar */
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0; /* Grup altındaki olası boşluğu kaldırır */
+}
+
+.radio-group p {
+  margin-bottom: 5px; /* Soru ile radyo düğmeleri arasındaki boşluğu minimal tutar */
+}
+
+.radio-group label {
+  display: flex; /* Radyo düğmesi ve yazıyı aynı satıra alır */
+  align-items: center; /* Dikey hizalamayı ortalar */
+  gap: 5px; /* Radyo düğmesi ile yazı arasındaki boşluk */
+  margin: 0; /* Label etiketindeki dış boşlukları kaldırır */
+}
+
+.radio-group input[type="radio"] {
+  margin: 0; /* Radyo düğmesinin kendi boşluğunu sıfırlar */
+}
+
+
+/* Küçük ekranlara uyum */
+@media (max-width: 768px) {
+  header .auth-buttons {
+    flex-direction: column; /* Butonlar alt alta */
+    gap: 10px; /* Dikey boşluk */
+  }
+
+  form {
+    width: 95%; /* Küçük ekranlarda genişlik */
+  }
+}
+
+/* Mesajlaşma İkonu */
+.message-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.message-icon img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #FFC107;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.message-icon img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */                                    /* Footer kısmı baştan düzenlenmeli prototiple alakası yok ve tüm sayfalarda olacak bir şey*/
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
